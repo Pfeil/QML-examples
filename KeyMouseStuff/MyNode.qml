@@ -21,8 +21,8 @@ Rectangle {
 	Behavior on y { id: smoothy; enabled: false; PropertyAnimation { duration: 200; alwaysRunToEnd: true } }
 
 	SequentialAnimation { id: blink;
-		PropertyAnimation { target: border; properties: "color"; to: "black"; duration: 50 }
-		PropertyAnimation { target: border; properties: "color"; to: color; duration: 200 }
+		PropertyAnimation { target: border; properties: "color"; to: "black"; duration: 25 }
+		PropertyAnimation { target: border; easing.type: Easing.OutQuad; properties: "color"; to: color; duration: 250 }
 	}
 
 	MouseArea {
