@@ -30,6 +30,9 @@ Rectangle {
 		drag.target: parent
 		drag.axis: Drag.XandYAxis
 		onReleased: blink.start()
+		onClicked: {
+			parent.focus = true;
+		}
 	}
 
 	Component.onCompleted: {
